@@ -81,7 +81,7 @@ def score(request):
 
 
 def rescale(politeness):
-    max_politeness = .9
+    max_politeness = .95
     pol = min(politeness['polite'], max_politeness)
     pol = (pol + (1 - max_politeness) / 2) / ((max_politeness + 1) / 2)
     impol = 1 - pol
