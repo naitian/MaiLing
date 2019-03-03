@@ -1,0 +1,9 @@
+---
+
+- name: Common roles
+  hosts: all
+  remote_user: williamzhang
+  become: yes
+  roles:
+    - common
+    - webapp
