@@ -17,7 +17,6 @@ def get_unigrams_and_bigrams(document):
     """
     Grabs unigrams and bigrams from document sentences. NLTK does the work.
     """
-    print(document)
     unigram_lists = map(lambda x: nltk.word_tokenize(x), document['sentences'])
     bigrams = chain(*map(lambda x: nltk.bigrams(x), unigram_lists))
     unigrams = chain(*unigram_lists)

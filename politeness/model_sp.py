@@ -80,24 +80,32 @@ def score(request):
     return probs
 
 
+def rescale(politeness):
+    max_politeness = .8
+    pol = min(politeness['polite'], max_politeness)
+    pol = (pol + (1 - max_politeness) / 2) / ((max_politeness + 1) / 2)
+    impol = 1 - pol
+    return {'polite': pol, 'impolite': impol}
+
+
 if __name__ == "__main__":
 
     """
     Sample classification of requests
     """
 
-    from test_documents_sp import TEST_DOCUMENTS
+    from .test_documents_sp import TEST_DOCUMENTS
     acc = 0
     TEST_DOCUMENTS = PolitenessFeatureVectorizer.preprocess(TEST_DOCUMENTS)
     for doc in TEST_DOCUMENTS:
 
-        probs = score(doc)
+        init_probs = score(doc)
+        probs = rescale(score(doc))
 
         print("====================")
         print("Text: ", doc['text'])
+        print("\tP(polite) = %.3f" % init_probs['polite'])
+        print("\tP(impolite) = %.3f" % init_probs['impolite'])
         print("\tP(polite) = %.3f" % probs['polite'])
         print("\tP(impolite) = %.3f" % probs['impolite'])
         print("\n")
-
-
-
