@@ -13,6 +13,4 @@ def score_draft(draft, email_addr="ben@example.com"):
     document = PolitenessFeatureVectorizer.preprocess([{'text': utterance.text}])[0]
     politeness = model.score(document)
     print(politeness)
-
-
-score_draft("Hello, how are you doing?")
+    return politeness
