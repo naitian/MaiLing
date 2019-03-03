@@ -16,6 +16,7 @@
      - nginx
      - supervisor
      - lsof
+     - git
 
 - name: Disable nginx on boot
   systemd:

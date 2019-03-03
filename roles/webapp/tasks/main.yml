@@ -1,5 +1,10 @@
 ---
 
+- name: Clone git repo for MaiLing
+  git:
+    repo: 'https://github.com/naitian/MaiLing.git'
+    dest: /home/williamzhang/MaiLing
+
 - name: Install python3 dependencies
   pip:
     requirements: /home/williamzhang/MaiLing/requirements.txt
