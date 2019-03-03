@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "reply-to": null,
+        "root": "1",
+        "text": "Dear Dr. Jurgens, \n I'm Naitian, a freshman computer science engineering major (and possibly linguistics minor) here at U of M. I'm interested in natural language processing and computational sociolinguistics, so I think the Blablablab (on top of having a great name) is a great match.\n As some more background about myself, I'm currently taking EECS 281, and am a project leader on the Michigan Data Science Team. I have experience with Python for data science and web development, and also have some (limited) experience with Python deep learning libraries such as Keras.\n Some of my previous projects have included a model to predict Facebook reactions based on the text in the post and a content / language analysis of posts from a popular Facebook group. As my senior research project in high school, I used skipthought vectors to implement a very crude style transfer algorithm (so not all of my projects are Facebook-related).\n Though I do have a technical background, I don't have much of a formal research background. I think doing research at your lab would be a great opportunity for me to learn more about both the field of computational linguistics and doing research in general.\n Please let me know if you have any openings for undergraduate researchers for this winter term and/or the month of May.\n Thanks for your time,\n Naitian Zhou",
+        "user": "naitian@umich.edu"
+    },
+    {
+        "id": "2",
+        "reply-to": "1",
+        "root": "1",
+        "text": "Hi Naitian,\n Thanks for reaching out!  Sounds like you have a great background for doing this kind of work.  It's a bit hectic to get new projects started at this point in the semester but I'd be happy to have you join the lab meetings as a start and get a sense for what we're all working on.  That will hopefully help spur on some ideas and interests for particular topics and then we could see where to get you started.  Usually I try to get students' projects lined up before the semester starts; however, we might be able to have you in a support role for some project to help bring you up to speed on our lab infrastructure and toolset.  We have ~10 undergrads in the lab working on various things so there's lots of potential.  The lab meets 4-5p on Friday right now.\n We also have a bi-weekly reading group during that time.  Next week we're reading Why Swear? Analyzing and Inferring the Intentions of Vulgar Expressions (http://aclweb.org/anthology/D18-1471) and going to talk about the paper.\n Thanks,\n David",
+        "user": "jurgens@umich.edu"
+    },
+    {
+        "id": "3",
+        "reply-to": "2",
+        "root": "1",
+        "text": "That sounds great. Where are the lab meetings on Friday?",
+        "user": "naitian@umich.edu"
+    }
+]
