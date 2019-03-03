@@ -1,0 +1,27 @@
+---
+
+- name: Install python3 dependencies
+  pip:
+    requirements: /home/williamzhang/MaiLing/requirements.txt
+
+- name: Download nltk data
+  shell: python3 -c "import nltk; nltk.download('punkt')"
+  args:
+    creates: /root/nltk_data
+
+- name: Download spacy en corpus
+  shell: python3 -m spacy download en
+  args:
+    creates: /usr/local/lib/python3.5/dist-packages/spacy/data/en
+
+- name: Copy mailing.conf
+  copy:
+    src: files/mailing.conf
+    dest: /etc/supervisor/conf.d/mailing.conf
+
+- name: Run MaiLing from supervisor
+  supervisorctl:
+    name: mailing
+    state: restarted
+
+...

@@ -10,9 +10,30 @@
     name: "{{ packages }}"
   vars:
     packages:
+     - aptitude
      - python3
      - python3-pip
      - nginx
+     - supervisor
+     - lsof
+
+- name: Disable nginx on boot
+  systemd:
+    name: nginx
+    state: stopped
+    enabled: no
+
+- name: Enable supervisor on boot
+  systemd:
+    name: supervisor
+    state: restarted
+    enabled: yes
+
+- name: Create pip to pip3 symlink
+  file:
+    src: /usr/bin/pip3
+    dest: /usr/bin/pip
+    state: link
 
 
 ...
