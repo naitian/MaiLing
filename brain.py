@@ -23,6 +23,6 @@ def score_draft(draft, email_addr="ben@example.com"):
     document = PolitenessFeatureVectorizer.preprocess([{'text': utterance.text}])[0]
     politeness = rescale(model.score(document))
     return {
-        # 'score': politeness,
+        'score': politeness,
         'indicators': indicators
     }
